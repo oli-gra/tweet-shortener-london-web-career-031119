@@ -46,7 +46,11 @@ def bulk_tweet_shortener(tweets)
 end
 
 def selective_tweet_shortener(tweet)
+<<<<<<< HEAD
   if tweet.length > 140
+=======
+  if tweet.size > 140
+>>>>>>> 2478cdc8425a249f6d96dd1fadcabc9d1e7e0bd4
     word_substituter(tweet)
   else
     return tweet
@@ -54,9 +58,16 @@ def selective_tweet_shortener(tweet)
 end
 
 def shortened_tweet_truncator(tweet)
+<<<<<<< HEAD
   if word_substituter(tweet).length > 140  
     truncated = word_substituter(tweet).chars[0..136].push("...").join("")
   else 
     word_substituter(tweet) 
   end 
 end 
+=======
+  if tweet.size > 140 
+    truncated_tweet = tweet[0..136]+"..."
+  end
+end
+>>>>>>> 2478cdc8425a249f6d96dd1fadcabc9d1e7e0bd4
